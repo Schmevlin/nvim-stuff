@@ -1,13 +1,25 @@
 require("config.lazy")
 require("schmevlin")
 
+vim.g.have_nerd_font = false
+vim.opt.number = true
+vim.opt.mouse = "a"
+vim.opt.showmode = false
+vim.opt.breakindent = true
+vim.opt.undofile = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.signcolumn = "yes"
+vim.opt.updatetime = 250
+vim.opt.timeoutlen = 300
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+vim.opt.list = true
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.inccommand = "split"
+vim.opt.cursorline = true
+vim.opt.scrolloff = 10
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
 vim.o.background = "dark" -- or "light" for light mode
 vim.cmd([[colorscheme gruvbox]])
-
-vim.lsp.config('luals', {
-  cmd = {'lua-language-server'},
-  filetypes = {'lua'},
-  root_markers = {'.luarc.json', '.luarc.jsonc'},
-})
-
-vim.lsp.enable('luals')
