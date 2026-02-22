@@ -9,5 +9,5 @@ sudo mv nvim-linux-x86_64.appimage /opt/nvim/nvim
 add this to .bashrc or .profile
 ```export PATH="$PATH:/opt/nvim/"```
 
-install npm for some language servers
-```sudo apt install npm```
+install some dependencies
+```sudo apt install npm ripgrep unzip```
